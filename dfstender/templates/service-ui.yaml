@@ -9,7 +9,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 8084
+      targetPort: 80
       name: http
   selector:
     app.kubernetes.io/instance: dfstender-ui

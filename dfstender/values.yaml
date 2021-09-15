@@ -14,7 +14,7 @@ imageui:
   repository: dfstender.azurecr.io/graphitiboard/ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0.0.1-b23886a0
+  tag: 0.0.1-c14e9f91
 
 imagePullSecrets: [ ]
 nameOverride: ""
@@ -41,7 +41,7 @@ securityContext:
   #   drop:
   #   - ALL
   # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
+# runAsNonRoot: true
 # runAsUser: 1000
 
 service:
@@ -53,7 +53,7 @@ ingress:
   className: ""
   annotations:
     { }
-    # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/ingress.class: nginx
   # kubernetes.io/tls-acme: "true"
   hosts:
     - host: chart-example.local
@@ -75,7 +75,7 @@ resources:
   #   cpu: 100m
   #   memory: 128Mi
   # requests:
-  #   cpu: 100m
+#   cpu: 100m
 #   memory: 128Mi
 
 autoscaling:

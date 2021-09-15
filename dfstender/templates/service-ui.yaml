@@ -6,10 +6,10 @@ metadata:
     app.kubernetes.io/instance: dfstender-ui
     app.kubernetes.io/name: dfstender-ui
 spec:
-  type: {{ .Values.service.type }}
+  type: { { .Values.service.type } }
   ports:
-    - port: {{ .Values.service.port }}
+    - port: { { .Values.service.port } }
       targetPort: 8084
       name: http
   selector:
-    app.kubernetes.io/name: dfstender-ui
+    app.kubernetes.io/instance: dfstender-ui

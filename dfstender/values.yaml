@@ -14,7 +14,7 @@ imageui:
   repository: dfstender.azurecr.io/graphitiboard/ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0.0.1-c14e9f91
+  tag: 0.0.1-a6288084
 
 imagePullSecrets: [ ]
 nameOverride: ""

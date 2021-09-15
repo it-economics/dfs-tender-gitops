@@ -37,9 +37,8 @@ spec:
             - secretRef:
                 name: {{ include "dfstender.fullname" . }}-secret
           ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
+            - name: app-port
+              containerPort: 8085
 {{/*          livenessProbe:*/}}
 {{/*            httpGet:*/}}
 {{/*              path: /*/}}

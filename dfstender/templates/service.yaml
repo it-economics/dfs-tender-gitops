@@ -8,8 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
+      targetPort: 8085
       name: http
   selector:
     {{- include "dfstender.selectorLabels" . | nindent 4 }}

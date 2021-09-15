@@ -33,6 +33,11 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DB_CONNECTION_URL
+              value: jdbc:sqlserver://dfstender-primary.database.windows.net:1433;database=dfstenderdb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+            - name: DB_DRIVER_CLASSNAME
+              value: com.microsoft.sqlserver.jdbc.SQLServerDriver
           envFrom:
             - secretRef:
                 name: {{ include "dfstender.fullname" . }}-secret

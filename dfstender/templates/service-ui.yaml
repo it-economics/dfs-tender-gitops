@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: { { include "dfstender.fullname" . } }
+  name: { { include "dfstender.fullname" . } }-ui
   labels: { { - include "dfstender.labels" . | nindent 4 } }
 spec:
   type: { { .Values.service.type } }
   ports:
     - port: { { .Values.service.port } }
-      targetPort: 8085
+      targetPort: 8084
       name: http
-  selector: { { - include "dfstender.selectorLabels" . | nindent 4 } }
+  selector: { { - include "dfstender.selectorLabels" . | nindent 4 } }-ui

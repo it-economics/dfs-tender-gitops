@@ -1,9 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dfstender.fullname" . }}-ui
+  name: dfstender-ui
   labels:
-    {{- include "dfstender.labels" . | nindent 4 }}
+    app.kubernetes.io/instance: dfstender-ui
+    app.kubernetes.io/name: dfstender-ui
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}

@@ -3,12 +3,13 @@ kind: Service
 metadata:
   name: dfstender-ui
   labels:
-    app.kubernetes.io/instance: dfstender
-    app.kubernetes.io/name: dfstender
+    app.kubernetes.io/instance: dfstender-ui
+    app.kubernetes.io/name: dfstender-ui
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   ports:
-    - port: { { .Values.service.port } }
+    - port: {{ .Values.service.port }}
       targetPort: 8084
       name: http
-  selector: dfstender-ui
+  selector:
+    app.kubernetes.io/name: dfstender-ui

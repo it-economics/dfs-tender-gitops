@@ -8,7 +8,7 @@ image:
   repository: dfstender.azurecr.io/graphittiboard/backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0.0.1-7ac76409
+  tag: 0.0.1-a6288084
 
 imageui:
   repository: dfstender.azurecr.io/graphitiboard/ui
@@ -39,8 +39,8 @@ securityContext:
   { }
   # capabilities:
   #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
+#   - ALL
+# readOnlyRootFilesystem: true
 # runAsNonRoot: true
 # runAsUser: 1000
 
@@ -73,8 +73,8 @@ resources:
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
   # limits:
   #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
+#   memory: 128Mi
+# requests:
 #   cpu: 100m
 #   memory: 128Mi
 

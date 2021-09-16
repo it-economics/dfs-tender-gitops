@@ -8,13 +8,13 @@ image:
   repository: dfstender.azurecr.io/graffitiboard/backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0.0.1-c5f1bc3c
+  tag: 0.0.1-234aaabf
 
 imageui:
   repository: dfstender.azurecr.io/graffitiboard/ui
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 0.0.1-c5f1bc3c
+  tag: 0.0.1-234aaabf
 
 imagePullSecrets: [ ]
 nameOverride: ""
